@@ -4,7 +4,7 @@ import Home, {loader as homeloader} from "./pages/Home"
 import HomeDetail from "./components/HomeDetail";
 import NotFound from "./pages/NotFound";
 import LogIn from "./pages/LogIn";
-import Register from "./pages/register";
+import Register from "./pages/Register";
 import ContactUs from "./pages/ContactUs";
   
   export const router = createBrowserRouter(
