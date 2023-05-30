@@ -6,22 +6,11 @@ import PulseLoader from "react-spinners/PulseLoader";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState();
-    const [header, setHeader] = useState();
-    
-    useEffect(() => {
-        axios("")
-            .then(response => setHeader(response.data))
-            .catch(() => setError("Der gik noget galt"))
-            .finally(() => setLoading(false))
-    }, []);
     return ( 
         <article>
-            {loading && <p className="flex text-2xl"> Loading <PulseLoader color="#272928" /> </p>}
+            {/* {loading && <p className="flex text-2xl"> Loading <PulseLoader color="#272928" /> </p>}
             {error && <p>{error}</p>}
-            {!error && header && (
+            {!error && header && ( */}
             <header>
                 <section className="flex items-center px-56 gap-2 bg-primarycolor01 w-full h-8">
                     <FaPaperPlane className="text-white" />
@@ -31,7 +20,7 @@ const Header = () => {
                     <article className='gap-4 justify-end'>
                         <article className='flex items-center gap-2 w-full end-0 pl-[33rem]'>
                             <BsPersonFill className="text-white" />
-                            <p className='text-white hover:underline'>Log ind</p>
+                            <Link to="/register"><p className='text-white hover:underline'>Log ind</p></Link>
                         </article>
                     </article>
                 </section>
@@ -46,7 +35,7 @@ const Header = () => {
                 </ul>
             </nav>
             </header>
-            )}
+            {/* )} */}
         </article>
      );
 }
