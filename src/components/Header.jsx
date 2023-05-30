@@ -31,7 +31,7 @@ const Header = () => {
                     <li><Link to="/" className="text-grey hover:underline">Boliger til salg</Link></li>
                     <li><Link to="/" className="text-grey hover:underline">Mæglere</Link></li>
                     <li><Link to="/" className="text-grey hover:underline">Mine favoritter</Link></li>
-                    <li><Link to="/" className="text-grey hover:underline">Kontakt os</Link></li>
+                    <li><Link to="/kontakt" className="text-grey hover:underline">Kontakt os</Link></li>
                 </ul>
             </nav>
             </header>
