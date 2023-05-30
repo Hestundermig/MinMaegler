@@ -10,6 +10,7 @@ const Nyhedsbrev = () => {
                 <input className='h-12 w-[33rem] rounded-sm pl-[2%] absolute' type="text" placeholder="Indtast din email adresse"  /> 
                 </span>
                 <GrFormNextLink className='text-5xl relative left-[36%]' />
+                <p>hej</p>
             </div>
         </section>
      );
