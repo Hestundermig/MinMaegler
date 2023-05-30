@@ -19,21 +19,8 @@ export const loader = async () => {
 
 const Home = () => {
 
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState();
-    const [header, setHeader] = useState();
-
-    useEffect(() => {
-        axios("")
-            .then(response => setHeader(response.data))
-            .catch(() => setError("Der gik noget galt"))
-            .finally(() => setLoading(false))
-    }, []);
     return (
         <main>
-            {loading && <p className="flex text-2xl"> Loading <PulseLoader color="#272928" /> </p>}
-            {error && <p>{error}</p>}
-            {!error && header && (
                 <section>
                     <Header />
                     <Hero />
@@ -45,7 +32,6 @@ const Home = () => {
                     <Opdateret />
                     <Footer />
                 </section>
-            )}
         </main>
     );
 }

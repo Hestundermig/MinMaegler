@@ -1,7 +1,7 @@
-import { useLoaderData } from "react-router-dom";
+import { useRouteLoaderData } from "react-router-dom";
 
 const Boliger = () => {
-  const homes = useLoaderData();
+  const homes = useRouteLoaderData();
 
   console.log(homes)
 
