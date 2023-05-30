@@ -104,7 +104,7 @@ const Register = () => {
       </div>
       <button type="submit">Register</button>
       {errors?.exists && (<p style={{color: "red"}}>{errors.exists}</p>)}
-      <p>Test</p>
+      <p>DET VIRKER</p>
     </form>
   );
 };
