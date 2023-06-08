@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { FaPaperPlane } from 'react-icons/fa';
 import { BsFillTelephoneFill, BsPersonFill } from 'react-icons/bs';
 import PulseLoader from "react-spinners/PulseLoader";
