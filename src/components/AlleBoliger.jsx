@@ -1,21 +1,33 @@
-import { useLoaderData } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import Header from "./Header"
 
-const Boliger = () => {
-  const homes = useLoaderData();
+const AlleBoliger = () => {
 
-  console.log(homes)
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState();
+  const [homes, setHome] = useState();
+  
+  useEffect(() => {
+      axios("https://dinmaegler.onrender.com/homes")
+          .then(response => setHome(response.data))
+          .catch(() => setError("Something went wrong"))
+          .finally(() => setLoading(false))
+  }, []);
+
+    homes && console.log(homes)
 
   return (
     <section className="bg-lightgrey pt-[2%] pb-[2%]">
-      <article className="text-center">
-        <h1 className="font-semibold text-heading text-3xl pb-[1%]">Udvalgte Boliger</h1>
-        <p className="text-para">There are many variations of passages of Lorem Ipsum available but the this in <br /> majority have suffered alteration in some</p>
-      </article>
+            <Header />
+            <p className='absolute text-white text-3xl font-semibold ml-[45%] mt-[7%]'>Boliger til salg</p>
+            <img className='bg-primarycolor01' src="Banner.png" alt="" />
+        {error && <p className="text-red-500">{error}</p>}
+        {loading && <p>Loading...</p>}
       <article className="max-w-[70rem] pt-8 flex flex-wrap gap-8 ml-[12.5%]">
-        {homes.slice(0, 4).map((home ) => (
+        {homes && homes.map((home) => ( 
           <section className="w-[33.75rem] h-[27rem] bg-white rounded ">
-            <img className="w-[33.75rem] h-[15rem]" src={home.url} alt="" />
+            <img className="w-[33.75rem] h-[15rem]" src={home.images[0].url} alt="" />
             <section className="pl-[3%] pt-[3%]">
 
               <p className="font-semibold text-lg pb-[0.5%]">{home.adress1}</p>
@@ -37,9 +49,8 @@ const Boliger = () => {
           </section>
         ))}
       </article>
-    <Link to="alleboliger"><button className=" bg-primarycolor01 text-white w-[10rem] h-[3rem] rounded-sm gap-4">Se alle boliger</button></Link>    
     </section>
   );
 };
 
-export default Boliger
+export default AlleBoliger

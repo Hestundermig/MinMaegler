@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { GrMail } from 'react-icons/gr';
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const AllAgents = () => {
   const [loading, setLoading] = useState(true);
@@ -15,11 +17,10 @@ const AllAgents = () => {
   }, []);
 
   return (
-    <section className="max-w-[68rem] pt-32 flex flex-wrap gap-8 ml-[12%]">
+    <section className="flex-wrap">
+    <Header />
       {error && <p className="text-red-500">{error}</p>}
       {loading && <p>Loading...</p>}
-      <h5 className="text-2xl text-heading font-semibold pl-[15%]">Mød vores engagerede medarbejdere</h5>
-        <p className="text-grey">Din Mægler er garant for altid veluddannet assistance i dit boligsalg. Kontakt en af vores medarbejdere.</p>
       {agents && agents.map((agent) => (
         <section className="w-[21rem] h-[28rem] gap-14 rounded-3xl" key={agent.id}>
           <img className="w-[21rem] h-[18rem]" src={agent.image} alt="" />
@@ -31,6 +32,7 @@ const AllAgents = () => {
           </span>
         </section>
       ))}
+      <Footer />
     </section>
   );
 };

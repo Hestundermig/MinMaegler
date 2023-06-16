@@ -16,7 +16,7 @@ export default function Hero() {
                 <p className="text-paragraphtext pb-4"><span className="underline">Søg</span> blandt 158 boliger til salg i 74 butikker</p>
                 <p className="text-para pb-2">Hvad skal din næste bolig indeholde</p>
                 <input className="border-solid border-2 border-para02 ... h-8 pl-[1%]" type="text" size="60" placeholder="Søg på fx. glaskeramisk komfur, bryggers, kælder eller lignende" />
-                <button className="w-20 h-8 bg-primarycolor01 text-white rounded-sm ml-6 hover:scale-110 transition">Søg</button>
+                <button className="w-20 h-8 bg-primarycolor01 text-white rounded-sm ml-6">Søg</button>
             </article>
             </article>
         </section>

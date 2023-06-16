@@ -30,7 +30,7 @@ const LogIn = () => {
                 <button className='flex rounded-sm bg-fbblue w-[10rem] h-[4rem] text-white items-center pl-[6%]'> <FaFacebookSquare className='text-2xl' />Facebook</button>
                 <button className='flex rounded-sm bg-primarycolor01 w-[10rem] h-[4rem] text-white items-center pl-[6%]'> <AiOutlineTwitter className='text-2xl' />Twitter</button>
             </span>
-                <p className="pt-[4%] pl-[19%]">Har du ikke en konto? <Link to="/register" className="text-blue hover:underline" >Opret bruger.</Link> </p> 
+                <p className="pt-[4%]">Har du ikke en konto? <Link to="/register" className="text-blue hover:underline" >Opret bruger.</Link> </p> 
             </div>
             </article>
 

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import ContactInfo from "../components/ContantInfo";
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 const ContactUs = () => {
     const [message, setMessage] = useState('');
@@ -12,6 +13,7 @@ const ContactUs = () => {
 
     return (
         <section className=''>
+            <Header />
             <p className='absolute text-white text-3xl font-semibold ml-[45%] mt-[7%]'>Kontakt os</p>
             <img className='bg-primarycolor01' src="Banner.png" alt="" />
         <div className='ml-[12%]'>

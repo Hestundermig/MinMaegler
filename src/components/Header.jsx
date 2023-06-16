@@ -27,10 +27,10 @@ const Header = () => {
             <nav className='flex items-center justify-between px-56 h-20'>
             <Link to="/"><img src="dinmaegler.png" alt="Din Mægler logo" /></Link>
                 <ul className="flex gap-6 w-1/2 px-6">
-                    <li><Link to="/" className="text-grey hover:underline">Boliger til salg</Link></li>
-                    <li><Link to="/" className="text-grey hover:underline">Mæglere</Link></li>
+                    <li><Link to="/alleboliger" className="text-grey hover:underline">Boliger til salg</Link></li>
+                    <li><Link to="/alleagenter" className="text-grey hover:underline">Mæglere</Link></li>
                     <li><Link to="/" className="text-grey hover:underline">Mine favoritter</Link></li>
-                    <li><Link to="/" className="text-grey hover:underline">Kontakt os</Link></li>
+                    <li><Link to="/kontakt" className="text-grey hover:underline">Kontakt os</Link></li>
                 </ul>
             </nav>
             </header>

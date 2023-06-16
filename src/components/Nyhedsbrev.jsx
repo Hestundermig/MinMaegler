@@ -7,7 +7,7 @@ const Nyhedsbrev = () => {
             <div className='relative flex text-white ml-[20%] pt-[5%]'>
                 <p className='w-[21.25rem] text-xl font-semibold'>Tilmeld dig vores nyhedsbrev og hold dig opdateret på boligmarkedet</p>
                 <span className='pl-[3%]'>
-                <input className='h-12 w-[33rem] rounded-sm pl-[2%] absolute' type="text" placeholder="Indtast din email adresse"  /> 
+                <input className='h-12 w-[33rem] rounded-sm pl-[2%] absolute text-black' type="text" placeholder="Indtast din email adresse"  /> 
                 </span>
                 <GrFormNextLink className='text-5xl relative left-[36%]' />
                 <p>hej</p>
